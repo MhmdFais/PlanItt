@@ -53,7 +53,7 @@ header h1{
 
 main{
     display: grid;
-    grid-template-columns:1fr 5fr;
+    grid-template-columns:1fr 6fr;
     height: calc(100vh - 10vh);
 }
 
@@ -63,15 +63,16 @@ main{
     padding-top: 1rem;
 }
 
-.nav-list-ul li{
+.nav-list-ul li, .add-project-button li{
     display: flex;
     align-items: center;
     padding: 0.5rem 0.65rem;
     font-size: 1.5rem;
     color: var(--list-font-before-active-color);
+    cursor: pointer;
 }
 
-.nav-list-ul li i {
+.nav-list-ul li i, .add-project-button li i {
     margin-right: 1rem;
     font-size: 1.5rem;  
 }
@@ -88,9 +89,17 @@ main{
 }
 
 .nav-list-ul li:hover,
-.nav-list-ul li:active {
+.nav-list-ul li:active,
+.add-project-button li:hover,
+.add-project-button li:active {
     background-color: var(--list-hover-color); 
     margin-right: 2rem;
     border-radius: 0.5rem;
     color: var(--list-font-color);
+}
+
+/* ADD PROJECT BUTTON */
+
+.nav-list-projects{
+
 }

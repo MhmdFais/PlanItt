@@ -1,0 +1,1 @@
+document.querySelectorAll(".nav-list-ul li").forEach((t=>{t.addEventListener("click",(function(){const t=this.textContent.trim();alert("Clicked: "+t)}))}));
