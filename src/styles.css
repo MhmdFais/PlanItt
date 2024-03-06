@@ -12,6 +12,7 @@
     --list-header-color: #a1a1aa;
     --header-color: #fb7185;
     --list-font-color: #64748b;
+    --add-btn-color: #323841;
     --list-hover-color: #e2e8f0;
     --list-font-before-active-color: #7d8ea7;
 }
@@ -59,7 +60,7 @@ main{
 
 .left-side-nav{
     background-color: var(--navbar-bg);
-    padding-left: clamp(0.7rem, 1.3rem, 2rem);
+    padding-left: clamp(0.5rem, 1rem, 1.7rem);
     padding-top: 1rem;
 }
 
@@ -67,20 +68,20 @@ main{
     display: flex;
     align-items: center;
     padding: 0.5rem 0.65rem;
-    font-size: 1.5rem;
+    font-size: clamp(0.5rem, 1.2rem, 1.5rem);
     color: var(--list-font-before-active-color);
     cursor: pointer;
 }
 
 .nav-list-ul li i, .add-project-button li i {
-    margin-right: 1rem;
-    font-size: 1.5rem;  
+    margin-right: 5%;
+    font-size: clamp(0.5rem, 1.2rem, 1.5rem);  
 }
 
 
 .nav-heading{
-    padding-bottom: 1rem;
-    font-size: clamp(1.2rem, 1.8rem, 2.3rem);
+    padding-bottom: 1%;
+    font-size: clamp(0.6rem, 1.5rem, 2rem);
     color: var(--list-header-color);
 }
 
@@ -98,8 +99,32 @@ main{
     color: var(--list-font-color);
 }
 
-/* ADD PROJECT BUTTON */
+/* ==== TASKS PAGES ==== */
 
-.nav-list-projects{
+/* HEADER */
 
+.to-do-lists-container{
+    padding: 1.5%;
+}
+
+.task-page-header{
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    justify-content: space-between;
+}
+
+.selected-page-title{
+    font-family: var(--font);
+    font-size: clamp(0.75rem, 1.65rem, 2.15rem);
+}
+
+.add-task-button{
+    font-family: var(--font);
+    color: var(--add-btn-color);
+    font-size: clamp(0.5rem, 1.4rem, 2rem);
+    border: 1px solid var(--add-btn-color);
+    background-color: transparent;
+    padding: 0.18% 0.57%;
+    border-radius: 1rem;
 }
