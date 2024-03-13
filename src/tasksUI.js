@@ -1,21 +1,41 @@
-export function pageHeader(pageTitleText){
-    const pageTitle = document.createElement('div');
-    pageTitle.classList.add('selected-page-title');
-    pageTitle.textContent = pageTitleText;
+export class PageHeader {
+    constructor(pageTitleText) {
+        this.pageTitleText = pageTitleText;
+        this.render();
+    }
 
-    const addProjectButton = document.createElement('button');
-    addProjectButton.classList.add('add-task-button');
-    addProjectButton.textContent = "+ Add Task";
+    createPageTitle() {
+        const pageTitle = document.createElement('div');
+        pageTitle.classList.add('selected-page-title');
+        pageTitle.textContent = this.pageTitleText;
+        return pageTitle;
+    }
 
-    const taskPageHeader = document.createElement('div');
-    taskPageHeader.classList.add('task-page-header');
+    createAddButton() {
+        const addTaskButton = document.createElement('button');
+        addTaskButton.classList.add('add-task-button');
+        addTaskButton.textContent = "+ Add Task";
+        return addTaskButton;
+    }
 
-    const taskMainPage = document.querySelector('.to-do-lists-container');
+    createHeader() {
+        const taskPageHeader = document.createElement('div');
+        taskPageHeader.classList.add('task-page-header');
 
-    taskMainPage.innerHTML = '';
+        const pageTitle = this.createPageTitle();
+        const addButton = this.createAddButton();
 
-    taskPageHeader.appendChild(pageTitle);
-    taskPageHeader.appendChild(addProjectButton);
-    taskMainPage.appendChild(taskPageHeader);
+        taskPageHeader.appendChild(pageTitle);
+        taskPageHeader.appendChild(addButton);
+
+        return taskPageHeader;
+    }
+
+    render() {
+        const taskMainPage = document.querySelector('.to-do-lists-container');
+        taskMainPage.innerHTML = '';
+
+        const header = this.createHeader();
+        taskMainPage.appendChild(header);
+    }
 }
-

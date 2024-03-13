@@ -92,7 +92,9 @@ main{
 .nav-list-ul li:hover,
 .nav-list-ul li:active,
 .add-project-button li:hover,
-.add-project-button li:active {
+.add-project-button li:active,
+.nav-list-projects li:hover,
+.nav-list-projects li:active {
     background-color: var(--list-hover-color); 
     margin-right: 2rem;
     border-radius: 0.5rem;
@@ -116,15 +118,51 @@ main{
 
 .selected-page-title{
     font-family: var(--font);
-    font-size: clamp(0.75rem, 1.65rem, 2.15rem);
+    font-size: clamp(0.75rem, 1.87rem, 2.15rem);
 }
 
-.add-task-button{
+.add-task-button, .add-project-button-js{
     font-family: var(--font);
     color: var(--add-btn-color);
     font-size: clamp(0.5rem, 1.4rem, 2rem);
     border: 1px solid var(--add-btn-color);
     background-color: transparent;
-    padding: 0.18% 0.57%;
+    padding: 0.15em 1em;
     border-radius: 1rem;
+    cursor: pointer;
+}
+
+/* ==== PROJECT PAGE ==== */
+
+.project-page-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.project-btn-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.delete-project-button{
+    font-family: var(--font);
+    color: var(--add-btn-color);
+    font-size: clamp(0.5rem, 1.4rem, 2rem);
+    color: red;
+    border: 1px solid var(--add-btn-color);
+    background-color: transparent;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+
+.add-task-button, .add-project-button-js, .delete-project-button{
+    white-space: nowrap;
+}
+
+.add-project-button-js, .delete-project-button{
+    padding: 0.15em 1em;
 }
