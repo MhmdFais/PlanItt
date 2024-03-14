@@ -12,7 +12,7 @@
     --list-header-color: #a1a1aa;
     --header-color: #fb7185;
     --list-font-color: #64748b;
-    --add-btn-color: #323841;
+    --add-btn-color: #4c545f;
     --list-hover-color: #e2e8f0;
     --list-font-before-active-color: #7d8ea7;
 }
@@ -151,7 +151,7 @@ main{
     font-family: var(--font);
     color: var(--add-btn-color);
     font-size: clamp(0.5rem, 1.4rem, 2rem);
-    color: red;
+    color: rgb(226, 74, 74);
     border: 1px solid var(--add-btn-color);
     background-color: transparent;
     border-radius: 1rem;
