@@ -51,32 +51,36 @@
                             </ul>
                         </div>
                         
-                        <div class="new-project-popup">
-                            <form method="dialog">
-                                <div class="user-enter-project-name">
-                                    <label for="proj-name" class="proj-name-label">Project Name</label>
-                                    <input type="text" id="proj-name" required>
-                                </div>
-                                <div class="popup-btn">
-                                    <div class="submit-btn">
-                                      <input
-                                        type="submit"
-                                        id="input-close-save"
-                                        value="Save"
-                                        class="btn-green"
-                                      />
+                        <!-- Add dialog element -->
+                        <div id="new-project-dialog" class="new-project-popup">
+                            <dialog id="project-dialog">
+                                <form method="dialog">
+                                    <div class="user-enter-project-name">
+                                        <label for="proj-name" class="proj-name-label">Project Name</label>
+                                        <input type="text" id="proj-name" required>
                                     </div>
-                                    <div class="cancel-btn">
-                                      <input
-                                        type="submit"
-                                        id="input-close-cancel"
-                                        value="Close"
-                                        class="btn-red"
-                                      />
+                                    <div class="popup-btn">
+                                        <div class="submit-btn">
+                                            <input
+                                                type="submit"
+                                                id="input-close-save"
+                                                value="Save"
+                                                class="btn-green"
+                                            />
+                                        </div>
+                                        <div class="cancel-btn">
+                                            <input
+                                                type="submit"
+                                                id="input-close-cancel"
+                                                value="Close"
+                                                class="btn-red"
+                                            />
+                                        </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                            </dialog>
                         </div>
+
 
                     </div>
                 </div>
