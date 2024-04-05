@@ -166,3 +166,66 @@ main{
 .add-project-button-js, .delete-project-button{
     padding: 0.15em 1em;
 }
+
+
+/* ==== ADD PROJECT POPUP ==== */
+
+#project-dialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.2rem;
+    height: fit-content;
+    border-radius: 1rem;
+    border: none;
+    font-family: var(--font);
+    width: 20vw;
+}
+
+#proj-name{
+    height: 5vh;
+    padding: 0.2rem;
+}
+
+.user-enter-project-name input[type="text"]{
+    font-size: clamp(0.5rem, 1.5rem, 1rem);
+}
+
+
+.user-enter-project-name{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+}
+
+.user-enter-project-name label {
+    font-family: var(--font);
+    font-size: clamp(0.5rem, 1.5rem, 1.8rem); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+
+
+.popup-btn{
+    display: flex;
+    gap: 1rem;
+}
+
+.popup-btn .submit-btn,
+.popup-btn .cancel-btn {
+    flex: 1;
+    font-family: var(--font);
+}
+
+.popup-btn .submit-btn input[type="submit"],
+.popup-btn .cancel-btn input[type="submit"] {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#project-dialog::backdrop {
+    background-color: hsla(0, 0%, 0%, 0.4);
+}
