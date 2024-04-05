@@ -1,3 +1,5 @@
+import { ProjectPage } from "./projectsUI";
+
 export class AddProject {
   constructor() {
     this.dialog = document.querySelector("#project-dialog");
@@ -46,8 +48,19 @@ export class AddProject {
       );
       this.listElement.classList.add(this.projectNameInput.value);
       this.unorderedList.appendChild(this.listElement);
+      this.getProjectUI();
       this.projectNameInput.value = "";
       this.dialog.close();
     }
+  }
+
+  getProjectUI() {
+    const listItemsProject = document.querySelectorAll(".nav-list-projects li");
+    listItemsProject.forEach((item) => {
+      item.addEventListener("click", function () {
+        const clickedItemText = this.textContent.trim();
+        const projectPage = new ProjectPage(clickedItemText);
+      });
+    });
   }
 }
