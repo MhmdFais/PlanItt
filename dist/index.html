@@ -89,6 +89,46 @@
             <div class="to-do-lists-container">
                 
             </div>
+
+            <div class="add-task-dialog">
+                <dialog id="add-task-dislog-box">
+                    <form method="dialog">
+                        <div class="user-enter-task-title">
+                            <label for="task-title">Title</label>
+                            <input type="text" id="task-title">
+                        </div>
+                        <div class="user-enter-task-detail">
+                            <label for="task-detail">Detail</label>
+                            <textarea id="task-detail"></textarea>
+                        </div>
+                        <div class="user-enter-task-date">
+                            <label for="task-date">Date</label>
+                            <input type="date" id="task-date">
+                        </div>
+                        <div class="is-stared">
+                            <label for="is-stared">Starred</label>
+                            <input type="checkbox" id="is-stared">
+                        </div>
+                        <div class="add-task-popup-btn">
+                            <div class="add-task-pop-up-submit">
+                                <input
+                                    type="submit"
+                                    id="input-close-save"
+                                    value="Save"
+                                    class="btn-green"
+                                />
+                            </div>
+                            <div class="add-task-pop-up-cancel">
+                                <input
+                                    type="submit"
+                                    id="input-close-cancel"
+                                    value="Close"
+                                    class="btn-red"
+                                />
+                        </div>
+                    </form>
+                </dialog>
+            </div>
     
         </main>
 
