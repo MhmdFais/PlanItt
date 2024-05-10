@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --main-font: "Comfortaa", sans-serif;
+    --primary-bg-color: #99f6e4;
+}
+
+body{
+    font-family: var(--main-font);
+    /* background-color: var(--primary-bg-color); */
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    background-color: var(--primary-bg-color);
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.content-container{
+    padding-top: 1%;
+    padding-left: 2%;
+}
