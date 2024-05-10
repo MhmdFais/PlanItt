@@ -10,6 +10,13 @@
     --primary-bg-color: #99f6e4;
 }
 
+/* list styles */
+
+ul{
+    list-style-type: none;
+}
+
+
 body{
     font-family: var(--main-font);
     /* background-color: var(--primary-bg-color); */
@@ -27,6 +34,41 @@ body{
 }
 
 .content-container{
-    padding-top: 1%;
-    padding-left: 2%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+
+.first-set-container{
+    padding-bottom: 1%;
+}
+
+/* Navbar Style */
+
+.navbar-container{
+    padding-top: 2.5vh;
+    padding-left: 2vw;
+}
+
+.navbar-container ul li{
+    padding-bottom: 2vh;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+    cursor: pointer;
+}
+
+.navbar-container h2{
+    padding-bottom: 2vh;
+}
+
+.navbar-container .first-set-container{
+    padding-bottom: 2.3vh;
+}
+
+.navbar-container button{
+    background: none;
+    /* padding: 1vh 2vw; */
+    border: none;
+    border-radius: 5px;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+    cursor: pointer;
 }
