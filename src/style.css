@@ -8,6 +8,10 @@
 :root{
     --main-font: "Comfortaa", sans-serif;
     --primary-bg-color: #99f6e4;
+    --nav-bar-bg: aliceblue;
+    --add-task-btn-clr: #b2f0e2;
+    --btn-shadow-color: #4ea28e;
+    --border-clr: #caf0e7;
 }
 
 /* list styles */
@@ -48,13 +52,24 @@ body{
 .navbar-container{
     padding-top: 2.5vh;
     padding-left: 2vw;
+    background-color:var(--nav-bar-bg);
 }
 
 .navbar-container ul li{
     padding-bottom: 2vh;
     font-size: clamp(1rem, 1.3vw, 2rem);
     cursor: pointer;
+    display: flex;
 }
+
+.nav-item:hover,
+.nav-item:active{
+    background-color: var(--primary-bg-color);
+    border-radius: 5px;
+    margin-right: 0.5vw;
+    padding: 1vh 0;
+}
+
 
 .navbar-container h2{
     padding-bottom: 2vh;
@@ -71,4 +86,34 @@ body{
     border-radius: 5px;
     font-size: clamp(1rem, 1.3vw, 2rem);
     cursor: pointer;
+    font-family: var(--main-font);
+}
+
+/* Main content body */
+
+.main-list-container{
+    padding-top: 2.5vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+}
+
+.main-list-container .list-heading-and-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1vh;
+    border-bottom: 1px solid var(--border-clr);
+}
+
+.main-list-container .list-heading-and-button button{
+    background-color: var(--add-task-btn-clr);
+    padding: 1.5vh 2.5vw;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+    font-family: var(--main-font);
+    box-shadow: 4px 4px 5px 0px var(--btn-shadow-color);
 }

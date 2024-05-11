@@ -1,1 +1,1 @@
-document.querySelector(".add-project-button").addEventListener("click",(()=>{console.log("Button clicked")}));
+(()=>{let e=document.querySelector(".add-project-button"),t=document.querySelector(".add-task-btn");e.addEventListener("click",(()=>{console.log("Button clicked")})),t.addEventListener("click",(()=>{console.log("Add task button clicked"),t.style.boxShadow="none",setTimeout((()=>{t.style.boxShadow=" 4px 4px 5px 0px #4ea28e"}),200)}))})();
