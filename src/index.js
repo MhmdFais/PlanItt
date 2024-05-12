@@ -1,15 +1,20 @@
-let btn = document.querySelector(".add-project-button");
+//import { renderProjectPage } from "./renderProjPage.js";
 
-let addBtn = document.querySelector(".add-task-btn");
+let addProjBtn = document.querySelector(".add-project-btn");
+let projectItems = document.querySelectorAll(".nav-item");
 
-btn.addEventListener("click", () => {
+addProjBtn.addEventListener("click", () => {
   console.log("Button clicked");
+  addProjBtn.style.boxShadow = "none";
+  setTimeout(() => {
+    addProjBtn.style.boxShadow = " 4px 4px 5px 0px rgb(173, 186, 198)";
+  }, 200);
 });
 
-addBtn.addEventListener("click", () => {
-  console.log("Add task button clicked");
-  addBtn.style.boxShadow = "none";
-  setTimeout(() => {
-    addBtn.style.boxShadow = " 4px 4px 5px 0px #4ea28e";
-  }, 200);
+projectItems.forEach((projectItem) => {
+  projectItem.addEventListener("click", function () {
+    const projectName = projectItem.textContent; // Get project name
+    console.log(projectName);
+    //renderProjectPage(projectName);
+  });
 });

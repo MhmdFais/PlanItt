@@ -28,7 +28,7 @@
         </div>
         <h2>Projects</h2>
         <div class="second-set-container">
-          <ul>
+          <ul class="second-set-container-ul">
             <li class="nav-item">University</li>
             <li class="nav-item">School</li>
           </ul>
@@ -41,12 +41,41 @@
         <div class="list-heading-and-button">
           <div class="list-heading"></div>
           <div class="add-task-button">
-            <button class="add-task-btn">+ Add Task</button>
+            <!-- <button class="add-task-btn">+ Add Task</button> -->
           </div>
         </div>
         <div class="tasks-display"></div>
       </div>
     </div>
+
+    <!-- Add Project Pop Up -->
+
+    <dialog class="add-project-pop-up">
+      <div class="add-project-pop-up-container">
+        <div class="add-project-pop-up-header">
+          <h2>Add Project</h2>
+        </div>
+        <div class="add-project-pop-up-body">
+          <form class="add-project-form">
+            <label for="project-name">Project Name</label>
+            <input
+              type="text"
+              id="project-name"
+              name="project-name"
+              placeholder="Enter Project Name"
+            />
+            <div class="add-proj-pop-btns">
+              <div class="pop-add-btn">
+                <button>Add</button>
+              </div>
+              <div class="pop-cancel-btn">
+                <button>Cancel</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </dialog>
   </body>
   <script src="../src/index.js"></script>
 </html>

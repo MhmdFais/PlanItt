@@ -12,6 +12,9 @@
     --add-task-btn-clr: #b2f0e2;
     --btn-shadow-color: #4ea28e;
     --border-clr: #caf0e7;
+    --add-project-bg:rgb(203, 218, 231);
+    --add-project-shadow: rgb(173, 186, 198);
+    --nav-hover-color:rgb(218, 226, 233);
 }
 
 /* list styles */
@@ -64,10 +67,11 @@ body{
 
 .nav-item:hover,
 .nav-item:active{
-    background-color: var(--primary-bg-color);
+    background-color: var(--nav-hover-color);
     border-radius: 5px;
     margin-right: 0.5vw;
     padding: 1vh 0;
+    padding-left: 0.5vw;
 }
 
 
@@ -80,13 +84,15 @@ body{
 }
 
 .navbar-container button{
-    background: none;
-    /* padding: 1vh 2vw; */
+    background-color: var(--add-project-bg);
+    padding: 1vh 2vw;
+    margin-top: 0.5vh;
     border: none;
     border-radius: 5px;
-    font-size: clamp(1rem, 1.3vw, 2rem);
     cursor: pointer;
+    font-size: clamp(1rem, 1.3vw, 2rem);
     font-family: var(--main-font);
+    box-shadow: 4px 4px 5px 0px var(--add-project-shadow);
 }
 
 /* Main content body */
@@ -116,4 +122,20 @@ body{
     font-size: clamp(1rem, 1.3vw, 2rem);
     font-family: var(--main-font);
     box-shadow: 4px 4px 5px 0px var(--btn-shadow-color);
+}
+
+/* Add Project Pop Up */
+
+dialog {
+    border: none !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.2rem;
+    height: fit-content;
+}
+
+dialog::backdrop {
+    background-color: hsla(0, 0%, 0%, 0.4);
 }
