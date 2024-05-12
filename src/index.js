@@ -1,4 +1,5 @@
-//import { renderProjectPage } from "./renderProjPage.js";
+import { ProjectPage } from "./renderProjPage";
+import "./style.css";
 
 let addProjBtn = document.querySelector(".add-project-btn");
 let projectItems = document.querySelectorAll(".nav-item");
@@ -13,8 +14,8 @@ addProjBtn.addEventListener("click", () => {
 
 projectItems.forEach((projectItem) => {
   projectItem.addEventListener("click", function () {
-    const projectName = projectItem.textContent; // Get project name
+    const projectName = projectItem.textContent;
     console.log(projectName);
-    //renderProjectPage(projectName);
+    const projectPage = new ProjectPage(projectName);
   });
 });

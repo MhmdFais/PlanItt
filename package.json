@@ -46,7 +46,8 @@
     "tapable": "^2.2.1",
     "terser": "^5.28.1",
     "tslib": "^2.6.2",
-    "utila": "^0.4.0"
+    "utila": "^0.4.0",
+    "webpack": "^5.91.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
