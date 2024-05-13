@@ -66,6 +66,7 @@ body{
 }
 
 .nav-item:hover,
+.nav-item-list:hover,
 .nav-item:active{
     background-color: var(--nav-hover-color);
     border-radius: 5px;
@@ -138,4 +139,12 @@ dialog {
 
 dialog::backdrop {
     background-color: hsla(0, 0%, 0%, 0.4);
+}
+
+/* Page Heading Text */
+
+.list-heading{
+    font-size: clamp(1rem, 2vw, 2rem);
+    /* padding-bottom: 1vh; */
+    font-family: var(--main-font);
 }

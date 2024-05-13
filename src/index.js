@@ -1,8 +1,10 @@
 import { ProjectPage } from "./renderProjPage";
 import "./style.css";
+import { TaskPage } from "./renderTasksPage";
 
 let addProjBtn = document.querySelector(".add-project-btn");
 let projectItems = document.querySelectorAll(".nav-item");
+let navBarItems = document.querySelectorAll(".nav-item-list");
 
 addProjBtn.addEventListener("click", () => {
   console.log("Button clicked");
@@ -17,5 +19,13 @@ projectItems.forEach((projectItem) => {
     const projectName = projectItem.textContent;
     console.log(projectName);
     const projectPage = new ProjectPage(projectName);
+  });
+});
+
+navBarItems.forEach((navBarItem) => {
+  navBarItem.addEventListener("click", function () {
+    const navItemName = navBarItem.textContent;
+    console.log(navItemName);
+    const taskPage = new TaskPage(navItemName);
   });
 });
