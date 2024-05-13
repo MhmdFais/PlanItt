@@ -15,6 +15,10 @@
     --add-project-bg:rgb(203, 218, 231);
     --add-project-shadow: rgb(173, 186, 198);
     --nav-hover-color:rgb(218, 226, 233);
+    --popup-save: #6defde;
+    --popup-save-shadow: #96f3e6;
+    --popup-cancel: #f77d8f;
+    --popup-cancel-shadow: #f5a7b3;
 }
 
 /* list styles */
@@ -127,7 +131,7 @@ body{
 
 /* Add Project Pop Up */
 
-dialog {
+#add-project-pop-up {
     border: none !important;
     position: absolute;
     top: 50%;
@@ -135,10 +139,79 @@ dialog {
     transform: translate(-50%, -50%);
     padding: 1.2rem;
     height: fit-content;
+    border-radius: 1rem;
+    border: none;
+    font-family: var(--main-font);
+    width: 20vw;
 }
 
-dialog::backdrop {
+#project-name{
+    height: 5vh;
+    padding: 0.2rem;
+}
+
+.add-project-form input[type="text"]{
+    font-size: clamp(0.5rem, 1vw, 1.5rem);
+    font-family: var(--main-font);
+    margin-bottom: 1vh;
+}
+
+.add-project-form{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.5vh;
+}
+
+.add-project-form label{
+    font-family: var(--main-font);
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1vh;
+} 
+
+.add-proj-pop-btns{
+    display: flex;
+    gap: 1vw;
+}
+
+.add-proj-pop-btns .pop-add-btn,
+.add-proj-pop-btns .pop-cancel-btn {
+    flex: 1;
+    font-family: var(--font);
+}
+
+.add-proj-pop-btns .pop-add-btn input[type="submit"],
+.add-proj-pop-btns .pop-cancel-btn input[type="submit"] {
+    width: 100%;
+    padding: 0.5vw;
+}
+
+#add-project-pop-up::backdrop {
     background-color: hsla(0, 0%, 0%, 0.4);
+}
+
+.pop-add-btn button{
+    background-color: var(--popup-save);
+    padding: 1vh 2vw;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+    font-family: var(--main-font);
+    box-shadow: 4px 4px 5px 0px var(--popup-save-shadow);
+}
+
+.pop-cancel-btn button{
+    background-color: var(--popup-cancel);
+    padding: 1vh 2vw;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+    font-family: var(--main-font);
+    box-shadow: 4px 4px 5px 0px var(--popup-cancel-shadow);
 }
 
 /* Page Heading Text */

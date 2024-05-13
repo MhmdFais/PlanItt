@@ -35,6 +35,7 @@ export class AddProject {
   }
 
   alertLog(message) {
+    //alert(message);
     console.log(message);
   }
 
