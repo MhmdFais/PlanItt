@@ -1,6 +1,7 @@
 import { ProjectPage } from "./renderProjPage";
 import "./style.css";
 import { TaskPage } from "./renderTasksPage";
+import { AddProject } from "./addProject";
 
 let addProjBtn = document.querySelector(".add-project-btn");
 let projectItems = document.querySelectorAll(".nav-item");
@@ -12,6 +13,7 @@ addProjBtn.addEventListener("click", () => {
   setTimeout(() => {
     addProjBtn.style.boxShadow = " 4px 4px 5px 0px rgb(173, 186, 198)";
   }, 200);
+  const addProject = new AddProject();
 });
 
 projectItems.forEach((projectItem) => {
