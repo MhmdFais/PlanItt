@@ -50,7 +50,7 @@ export class AddProject {
     this.projectUnorderedList.appendChild(this.listElement);
     this.getProjectUI();
     this.projectName.value = "";
-    this.dialog.close();
+    this.popUpDialog.close();
   }
 
   getProjectUI() {
