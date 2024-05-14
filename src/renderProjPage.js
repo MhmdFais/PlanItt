@@ -1,3 +1,6 @@
+import { th } from "date-fns/locale";
+import { AddTask } from "./addTask";
+
 export class ProjectPage {
   constructor(pageTitleText) {
     this.pageTitleText = pageTitleText;
@@ -15,6 +18,7 @@ export class ProjectPage {
     const addTaskButton = document.createElement("button");
     addTaskButton.classList.add("add-task-btn");
     addTaskButton.textContent = "Add Task";
+    addTaskButton.addEventListener("click", this.handleAddTaskClick.bind(this));
     return addTaskButton;
   }
 
@@ -41,5 +45,14 @@ export class ProjectPage {
     taskMainPage.innerHTML = "";
     const header = this.createHeader();
     taskMainPage.appendChild(header);
+  }
+
+  handleAddTaskClick(event) {
+    //console.log("Button clicked");
+    event.target.style.boxShadow = "none";
+    setTimeout(() => {
+      event.target.style.boxShadow = " 4px 4px 5px 0px rgb(173, 186, 198)";
+    }, 200);
+    const addTask = new AddTask(this.pageTitleText);
   }
 }

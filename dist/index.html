@@ -71,6 +71,34 @@
     </dialog>
 
     <!--  -->
+
+    <!-- Add Task Pop Up -->
+
+    <dialog id="add-task-pop-up">
+      <form class="add-task-pop-up-form" method="dialog">
+        <label for="task-name">Task Name</label>
+        <input
+          type="text"
+          id="task-name"
+          name="task-name"
+          placeholder="Enter Task Name"
+        />
+        <label for="task-desc">Task Description</label>
+        <textarea id="task-desc"> </textarea>
+        <label for="task-date">Task Date</label>
+        <input type="date" id="task-date" name="task-date" />
+        <div class="add-task-pop-up-btns-task">
+          <div class="pop-add-btn-task">
+            <button type="submit" id="pop-up-save-task-btn">Add</button>
+          </div>
+          <div class="pop-cancel-btn-task">
+            <button type="submit" id="pop-up-delete-task-btn">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </dialog>
+
+    <!--  -->
   </body>
   <!-- <script src="../src/index.js"></script> -->
   <script src="main.js"></script>
