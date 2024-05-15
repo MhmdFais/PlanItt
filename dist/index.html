@@ -81,12 +81,19 @@
           type="text"
           id="task-name"
           name="task-name"
-          placeholder="Enter Task Name"
+          class="task-name"
+          required
         />
         <label for="task-desc">Task Description</label>
         <textarea id="task-desc"> </textarea>
         <label for="task-date">Task Date</label>
-        <input type="date" id="task-date" name="task-date" />
+        <input type="date" id="task-date" name="task-date" required />
+        <label for="task-priority">Task Priority</label>
+        <select id="task-priority" name="task-priority">
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
         <div class="add-task-pop-up-btns-task">
           <div class="pop-add-btn-task">
             <button type="submit" id="pop-up-save-task-btn">Add</button>

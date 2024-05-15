@@ -15,7 +15,7 @@
     --add-project-bg:rgb(203, 218, 231);
     --add-project-shadow: rgb(173, 186, 198);
     --nav-hover-color:rgb(218, 226, 233);
-    --popup-save: #68f6e3;
+    --popup-save: #5fe2d1;
     --popup-save-shadow: #a6f4e9;
     --popup-cancel: #f77d8f;
     --popup-cancel-shadow: #f5a7b3;
@@ -166,8 +166,8 @@ body{
     font-family: var(--main-font);
     font-size: clamp(1rem, 1.5vw, 2rem);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     padding-bottom: 1vh;
 } 
 
@@ -231,18 +231,19 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 1.2rem;
+    padding: 2.5vw;
     height: fit-content;
     border-radius: 1rem;
     border: none;
     font-family: var(--main-font);
-    width: 20vw;
+    width: 40vw;
 }
 
 .add-task-pop-up-form input[type="text"]{
-    font-size: clamp(0.5rem, 1vw, 1.5rem);
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
     font-family: var(--main-font);
-    margin-bottom: 1vh;
+    margin-bottom: 2.3vh;
+    padding: 0.5vh;
 }
 
 .add-task-pop-up-form{
@@ -261,20 +262,30 @@ body{
 }
 
 .add-task-pop-up-form input[type="date"]{
-    font-size: clamp(0.5rem, 1vw, 1.5rem);
+    font-size: clamp(0.5rem, 1.55vw, 1.5rem);
     font-family: var(--main-font);
-    margin-bottom: 1vh;
+    margin-bottom: 2.3vh;
+}
+
+.add-task-pop-up-form select{
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+    font-family: var(--main-font);
+    margin-bottom: 2.8vh;
+    padding: 0.5vh;
 }
 
 .add-task-pop-up-form textarea{
-    font-size: clamp(0.5rem, 1vw, 1.5rem);
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
     font-family: var(--main-font);
-    margin-bottom: 1vh;
+    margin-bottom: 2.3vh;
+    padding: 0.5vh;
+    min-height: 10vh;
 }
 
-.add-task-pop-up-form .add-task-pop-up-btns{
+.add-task-pop-up-btns-task{
     display: flex;
     gap: 1vw;
+    justify-content: space-around;
 }
 
 .add-task-pop-up-btns .pop-add-btn-task input[type="submit"],
