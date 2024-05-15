@@ -58,6 +58,7 @@
           id="project-name"
           name="project-name"
           placeholder="Enter Project Name"
+          required
         />
         <div class="add-proj-pop-btns">
           <div class="pop-add-btn">
@@ -77,13 +78,7 @@
     <dialog id="add-task-pop-up">
       <form class="add-task-pop-up-form" method="dialog">
         <label for="task-name">Task Name</label>
-        <input
-          type="text"
-          id="task-name"
-          name="task-name"
-          class="task-name"
-          required
-        />
+        <input type="text" id="task-name" name="task-name" required />
         <label for="task-desc">Task Description</label>
         <textarea id="task-desc"> </textarea>
         <label for="task-date">Task Date</label>
