@@ -9,7 +9,6 @@ export class AddTask {
     this.saveTaskBtn = document.querySelector("#pop-up-save-task-btn");
     this.cancelTaskBtn = document.querySelector("#pop-up-delete-task-btn");
     this.taskPriority = document.querySelector("#task-priority");
-    this.taskDisplay = document.querySelector(".tasks-display");
 
     this.saveTaskBtn.addEventListener("click", (event) => this.saveTask(event));
     this.cancelTaskBtn.addEventListener("click", (event) =>
@@ -23,6 +22,31 @@ export class AddTask {
     this.popUpTaskDialog.showModal();
   }
 
+  saveTask(event) {
+    event.preventDefault();
+    if (this.taskName.value.trim() === "") {
+      //this.alertLog("Please enter a task name");
+    } else {
+      const taskCardDisplay = document.querySelector("#tasks-display");
+      if (taskCardDisplay !== null) {
+        const contentCard = this.createTaskCard();
+        taskCardDisplay.appendChild(contentCard);
+      } else {
+        console.log(error);
+        console.log("No task display found");
+      }
+      const taskMainPage = document.querySelector(".main-list-container");
+      if (taskMainPage !== null) {
+        taskMainPage.innerHTML = "";
+        taskMainPage.appendChild(this.taskCardDisplay);
+      } else {
+        console.log(error);
+        console.log("No main list container found");
+      }
+      this.closeTaskDialog(event);
+    }
+  }
+
   closeTaskDialog(event) {
     event.preventDefault();
     this.taskName.value = "";
@@ -31,30 +55,28 @@ export class AddTask {
     this.popUpTaskDialog.close();
   }
 
-  saveTask(event) {
-    event.preventDefault();
-    if (this.taskName.value.trim() === "") {
-      //this.alertLog("Please enter a task name");
-    } else {
-      this.createTaskCard();
-      this.closeTaskDialog(event);
-    }
-  }
+  // card() {
+
+  // }
 
   createTaskCard() {
-    console.log("clicked clicked");
-
-    const taskCardContainer = document.createElement("div");
-    taskCardContainer.classList.add("task-card-container");
+    const container = this.taskCardContainer();
 
     const rightSide = this.rightSideCard();
 
     const leftSide = this.leftSideCard();
 
-    taskCardContainer.appendChild(leftSide);
-    taskCardContainer.appendChild(rightSide);
+    container.appendChild(rightSide);
+    container.appendChild(leftSide);
 
-    this.taskDisplay.appendChild(taskCardContainer);
+    return container;
+  }
+
+  taskCardContainer() {
+    const taskCardContainer = document.createElement("div");
+    taskCardContainer.classList.add("task-card-container");
+
+    return taskCardContainer;
   }
 
   rightSideCard() {
