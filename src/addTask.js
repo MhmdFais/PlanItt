@@ -27,22 +27,8 @@ export class AddTask {
     if (this.taskName.value.trim() === "") {
       //this.alertLog("Please enter a task name");
     } else {
-      const taskCardDisplay = document.querySelector("#tasks-display");
-      if (taskCardDisplay !== null) {
-        const contentCard = this.createTaskCard();
-        taskCardDisplay.appendChild(contentCard);
-      } else {
-        console.log(error);
-        console.log("No task display found");
-      }
-      const taskMainPage = document.querySelector(".main-list-container");
-      if (taskMainPage !== null) {
-        taskMainPage.innerHTML = "";
-        taskMainPage.appendChild(this.taskCardDisplay);
-      } else {
-        console.log(error);
-        console.log("No main list container found");
-      }
+      this.embadeToFile();
+      console.log("Task saved");
       this.closeTaskDialog(event);
     }
   }
@@ -55,9 +41,24 @@ export class AddTask {
     this.popUpTaskDialog.close();
   }
 
-  // card() {
+  embadeToFile() {
+    const taskMainPage = document.querySelector(".main-list-container");
 
-  // }
+    const taskDisplay = this.createTaskDisplay();
+
+    taskMainPage.appendChild(taskDisplay);
+  }
+
+  createTaskDisplay() {
+    const taskDisplay = document.createElement("div");
+    taskDisplay.classList.add("task-display");
+
+    const taskCard = this.createTaskCard();
+
+    taskDisplay.appendChild(taskCard);
+
+    return taskDisplay;
+  }
 
   createTaskCard() {
     const container = this.taskCardContainer();
