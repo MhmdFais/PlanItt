@@ -1,0 +1,35 @@
+:root{
+    --card-bg: #e5e7eb;
+    --card-shadow: rgb(173, 186, 198);
+}
+
+.task-display{
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 30%);
+    gap: 1vw;
+    padding-top: 2vh;
+}
+
+.task-card-container{
+    display: grid;
+    grid-template-columns: 1fr 16fr;
+    height: 12vh;
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    box-shadow: 4px 4px 5px 0px var(--card-shadow);
+}
+
+.task-card-right-side{
+    margin: 2vh;
+}
+
+.task-priority-color-container{
+    height: 100%;
+    width: 1.5vw;
+    border-radius: 1rem;
+}
+
+.task-card-left-side{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}

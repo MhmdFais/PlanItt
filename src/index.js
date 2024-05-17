@@ -1,5 +1,6 @@
 import { ProjectPage } from "./renderProjPage";
 import "./style.css";
+import "./taskStyle.css";
 import { TaskPage } from "./renderTasksPage";
 import { AddProject } from "./addProject";
 import { AddTask } from "./addTask";

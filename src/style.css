@@ -106,8 +106,10 @@ body{
     padding-top: 2.5vh;
     padding-left: 2vw;
     padding-right: 2vw;
-    display: grid;
-    grid-template-rows: 1fr 9fr;
+    padding-bottom: 2vh;
+    /* display: grid;
+    grid-template-rows: 1fr 9fr; */
+    overflow: hidden;
 }
 
 .main-list-container .list-heading-and-button{

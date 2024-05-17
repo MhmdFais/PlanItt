@@ -90,11 +90,11 @@ export class AddTask {
     const selectedPriority = this.taskPriority.value;
 
     if (selectedPriority === "high") {
-      taskPriorityColorContainer.style.backgroundColor = "#f43f5e";
+      taskPriorityColorContainer.style.backgroundColor = "#fecaca";
     } else if (selectedPriority === "medium") {
-      taskPriorityColorContainer.style.backgroundColor = "#f59e0b";
+      taskPriorityColorContainer.style.backgroundColor = "#fde68a";
     } else {
-      taskPriorityColorContainer.style.backgroundColor = "#10b981";
+      taskPriorityColorContainer.style.backgroundColor = "#99f6e4";
     }
 
     taskCardRightSide.appendChild(taskPriorityColorContainer);
@@ -160,7 +160,7 @@ export class AddTask {
     const circularCheckBoxContainer = document.createElement("div");
     circularCheckBoxContainer.classList.add("circular-check-box-container");
 
-    const circularCheckBox = document.createElement("div");
+    const circularCheckBox = document.createElement("checkbox");
     circularCheckBox.classList.add("circular-check-box");
 
     circularCheckBoxContainer.appendChild(circularCheckBox);
