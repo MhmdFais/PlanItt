@@ -1,6 +1,7 @@
 :root{
     --card-bg: #e5e7eb;
     --card-shadow: rgb(173, 186, 198);
+    
 }
 
 .task-display{
@@ -32,4 +33,28 @@
 .task-card-left-side{
     display: grid;
     grid-template-rows: 1fr 1fr;
+    margin: 2vh 0; 
+}
+
+.left-side-task-header{
+    display: grid;
+    grid-template-columns: 3fr 3fr 1fr;
+}
+
+/* .task-name-container h3,  */
+/* .task-date-container p{
+    font-family: var(--font);
+} */
+
+.circular-check-box-container{
+    display: flex;
+    justify-content: end;
+    padding-right: 1vw;
+}
+
+.circular-check-box{
+    height: 1.5vw;
+    width: 1.5vw;
+    border-radius: 50%;
+    border: 1px solid black;
 }

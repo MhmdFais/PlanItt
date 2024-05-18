@@ -160,10 +160,11 @@ export class AddTask {
     const circularCheckBoxContainer = document.createElement("div");
     circularCheckBoxContainer.classList.add("circular-check-box-container");
 
-    const circularCheckBox = document.createElement("checkbox");
-    circularCheckBox.classList.add("circular-check-box");
+    const checkBox = document.createElement("input");
+    checkBox.setAttribute("type", "checkbox");
+    checkBox.classList.add("circular-check-box");
 
-    circularCheckBoxContainer.appendChild(circularCheckBox);
+    circularCheckBoxContainer.appendChild(checkBox);
     return circularCheckBoxContainer;
   }
 
