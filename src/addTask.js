@@ -1,3 +1,6 @@
+import { addTaskToLocal } from "./storage";
+import { changeTaskStatusInLocal } from "./storage";
+
 export class AddTask {
   constructor(pageName) {
     this.pageName = pageName;
@@ -29,6 +32,7 @@ export class AddTask {
     } else {
       this.embadeToFile();
       console.log("Task saved");
+      this.addToLocal();
       this.closeTaskDialog(event);
     }
   }
@@ -47,6 +51,21 @@ export class AddTask {
     const taskDisplay = this.createTaskDisplay();
 
     taskMainPage.appendChild(taskDisplay);
+  }
+
+  addToLocal() {
+    let task = {
+      name: this.taskName.value,
+      description: this.taskDescription.value,
+      dueDate: this.taskDate.value,
+      priority: this.taskPriority.value,
+      project: this.pageName,
+      status: "not done",
+    };
+
+    console.log(task);
+
+    addTaskToLocal(task);
   }
 
   createTaskDisplay() {
@@ -163,6 +182,9 @@ export class AddTask {
     const checkBox = document.createElement("input");
     checkBox.setAttribute("type", "checkbox");
     checkBox.classList.add("circular-check-box");
+    checkBox.addEventListener("change", () =>
+      changeTaskStatusInLocal(this.taskName.value)
+    );
 
     circularCheckBoxContainer.appendChild(checkBox);
     return circularCheckBoxContainer;

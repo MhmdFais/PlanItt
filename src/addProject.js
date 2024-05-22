@@ -1,4 +1,4 @@
-import { ProjectPage } from "./renderProjPage";
+import { addProjectToLocal } from "./storage";
 
 export class AddProject {
   constructor() {
@@ -31,6 +31,7 @@ export class AddProject {
       this.alertLog("Please enter a project name");
     } else {
       this.addToProjects();
+      this.saveProjectToLocal();
     }
   }
 
@@ -52,6 +53,10 @@ export class AddProject {
     this.getProjectUI();
     this.projectName.value = "";
     this.popUpDialog.close();
+  }
+
+  saveProjectToLocal() {
+    addProjectToLocal(this.projectName.value);
   }
 
   getProjectUI() {
