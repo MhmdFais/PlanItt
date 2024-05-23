@@ -1,4 +1,4 @@
-export class TaskPage {
+export class RunningPage {
   constructor(pageTitle) {
     this.pageTitle = pageTitle;
     this.render();

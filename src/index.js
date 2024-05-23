@@ -1,9 +1,9 @@
 import { ProjectPage } from "./renderProjPage";
 import "./style.css";
 import "./taskStyle.css";
-import { TaskPage } from "./renderTasksPage";
 import { AddProject } from "./addProject";
-import { AddTask } from "./addTask";
+import { RunningPage } from "./runningPage";
+import { CompletePage } from "./completePage";
 
 let addProjBtn = document.querySelector(".add-project-btn");
 let projectItems = document.querySelectorAll(".nav-item");
@@ -29,7 +29,12 @@ projectItems.forEach((projectItem) => {
 navBarItems.forEach((navBarItem) => {
   navBarItem.addEventListener("click", function () {
     const navItemName = navBarItem.textContent;
-    console.log(navItemName);
-    const taskPage = new TaskPage(navItemName);
+    // console.log(navItemName);
+    // const taskPage = new TaskPage(navItemName);
+    if (navItemName === "Running") {
+      const runningPage = new RunningPage(navItemName);
+    } else if (navItemName === "Completed") {
+      const completePage = new CompletePage(navItemName);
+    }
   });
 });

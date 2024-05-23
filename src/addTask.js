@@ -182,9 +182,9 @@ export class AddTask {
     const checkBox = document.createElement("input");
     checkBox.setAttribute("type", "checkbox");
     checkBox.classList.add("circular-check-box");
-    checkBox.addEventListener("change", () =>
-      changeTaskStatusInLocal(this.taskName.value)
-    );
+    checkBox.addEventListener("change", () => {
+      changeTaskStatusInLocal(this.taskName.value);
+    });
 
     circularCheckBoxContainer.appendChild(checkBox);
     return circularCheckBoxContainer;
