@@ -76,24 +76,35 @@
 /// STORE TASKS AND PROJECTS IN LOCAL STORAGE
 
 // Initialize the projects and tasks arrays from local storage
-let projectsLocal = JSON.parse(localStorage.getItem("projects")) || [];
+//let projectsLocal = JSON.parse(localStorage.getItem("projects")) || [];
 let tasksLocal = JSON.parse(localStorage.getItem("tasks")) || [];
+let projectLocal = JSON.parse(localStorage.getItem("projects")) || [];
 
 // Function to store tasks and projects in local storage
 export function storeTasksAndProjects() {
   localStorage.setItem("tasks", JSON.stringify(tasksLocal));
-  localStorage.setItem("projects", JSON.stringify(projectsLocal));
+  localStorage.setItem("projects", JSON.stringify(projectLocal));
 }
 
 // Function to get tasks and projects from local storage
 export function getTasksAndProjectsFromLocal() {
   tasks = tasksLocal;
-  projects = projectsLocal;
+  projects = projectLocal;
 }
 
 // Function to add a project to the projects array
 export function addProjectToLocal(projectName) {
-  projectsLocal.push(projectName);
+  projectLocal.push(projectName);
+  storeTasksAndProjects();
+}
+
+export function getProjectsFromLocal() {
+  return projectLocal;
+}
+
+// delete all the projects
+export function deleteAllProjects() {
+  projectLocal = [];
   storeTasksAndProjects();
 }
 

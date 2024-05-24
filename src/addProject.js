@@ -1,4 +1,6 @@
 import { addProjectToLocal } from "./storage";
+import { ProjectPage } from "./renderProjPage";
+import { getProjectsFromLocal } from "./storage";
 
 export class AddProject {
   constructor() {
@@ -30,8 +32,9 @@ export class AddProject {
     if (this.projectName.value.trim() === "") {
       this.alertLog("Please enter a project name");
     } else {
-      this.addToProjects();
+      //this.addToProjects();
       this.saveProjectToLocal();
+      this.getAllProjects();
     }
   }
 
@@ -40,19 +43,25 @@ export class AddProject {
     console.log(message);
   }
 
-  addToProjects() {
+  getAllProjects() {
+    let projects = getProjectsFromLocal();
+    console.log(projects);
+    this.projectName.value = "";
+    this.popUpDialog.close();
+    projects.forEach((project) => {
+      this.addToProjects(project);
+    });
+  }
+
+  addToProjects(projectNameEntered) {
     this.projectUnorderedList = document.querySelector(
       ".second-set-container-ul"
     );
     this.listElement = document.createElement("li");
-    this.listElement.appendChild(
-      document.createTextNode(this.projectName.value)
-    );
+    this.listElement.appendChild(document.createTextNode(projectNameEntered));
     this.listElement.classList.add("nav-item");
     this.projectUnorderedList.appendChild(this.listElement);
     this.getProjectUI();
-    this.projectName.value = "";
-    this.popUpDialog.close();
   }
 
   saveProjectToLocal() {

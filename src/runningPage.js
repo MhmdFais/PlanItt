@@ -1,3 +1,4 @@
+import { ta } from "date-fns/locale";
 import { TaskCard } from "./createTaskCard";
 import { getNotDoneTasksFromLocal } from "./storage";
 
@@ -37,5 +38,6 @@ export class RunningPage {
     const header = this.createHeader();
     const bodyPart = this.createRunningCard();
     taskMainPage.appendChild(header);
+    taskMainPage.appendChild(bodyPart);
   }
 }

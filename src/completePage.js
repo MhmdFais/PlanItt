@@ -36,7 +36,7 @@ export class CompletePage {
     taskMainPage.innerHTML = "";
     const header = this.createCompleteHeader();
     const body = this.createTasks();
-    taskMainPage.appendChild(body);
     taskMainPage.appendChild(header);
+    taskMainPage.appendChild(body);
   }
 }

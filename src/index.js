@@ -33,7 +33,7 @@ navBarItems.forEach((navBarItem) => {
     // const taskPage = new TaskPage(navItemName);
     if (navItemName === "Running") {
       const runningPage = new RunningPage(navItemName);
-    } else if (navItemName === "Completed") {
+    } else {
       const completePage = new CompletePage(navItemName);
     }
   });
