@@ -32,9 +32,9 @@ export class AddProject {
     if (this.projectName.value.trim() === "") {
       this.alertLog("Please enter a project name");
     } else {
-      //this.addToProjects();
+      this.addToProjects();
       this.saveProjectToLocal();
-      this.getAllProjects();
+      //this.getAllProjects();
     }
   }
 

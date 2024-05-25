@@ -38,3 +38,5 @@ navBarItems.forEach((navBarItem) => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {});
